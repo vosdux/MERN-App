@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 
-export const Auth: FC = () => {
+export const Links: FC = () => {
     return (
         <div>
-            <h1>Auth</h1>
+            <h1>Links</h1>
         </div>
     );
 }

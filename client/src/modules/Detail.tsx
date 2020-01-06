@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 
-export const Auth: FC = () => {
+export const Detail: FC = () => {
     return (
         <div>
-            <h1>Auth</h1>
+            <h1>Detail</h1>
         </div>
     );
 }
