@@ -5,7 +5,7 @@ import { Create } from './modules/Create';
 import { Detail } from './modules/Detail';
 import { Auth } from './modules/Auth';
 
-export const useRoutes = (isAuthenticated: boolean) => {
+export const useRoutes = (isAuthenticated: boolean): JSX.Element => {
     if(isAuthenticated) {
         return (
             <Switch>
