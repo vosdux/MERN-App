@@ -20,18 +20,22 @@ export const Auth: FC = () => {
     useEffect(() => {
         message(error)
         clearError()
-    }, [error, message, clearError])
+    }, [error, message, clearError]);
+
+    useEffect(() => {
+        window.M.updateTextFields()
+    }, []);
 
     const changeHandler = (event: ChangeEvent<HTMLInputElement>) => {
         setForm({ ...form, [event.target.name]: event.target.value })
-    }
+    };
 
     const registerHandler = async () => {
         try {
             const data = await request('http://localhost:5000/api/auth/register', 'POST', {...form})
             message(data.message)
         } catch (error) {}
-    }
+    };
 
     const loginHandler = async () => {
         try {
@@ -40,7 +44,7 @@ export const Auth: FC = () => {
         } catch (error) {
 
         }
-    }
+    };
 
     return (
         <div className="row">
