@@ -1,8 +1,8 @@
 import {useState, useCallback} from 'react';
 
-interface IFetchData {
+export interface IFetchData {
     loading: boolean,
-    request: any,
+    request: (url: string, method: string, body?: any, headers?: any) => Promise<any>,
     error: string|null,
     clearError: () => void
 };

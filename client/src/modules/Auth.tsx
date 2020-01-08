@@ -60,6 +60,7 @@ export const Auth: FC = () => {
                                     id="email" 
                                     type="text"
                                     name="email" 
+                                    value={form.email}
                                     className="input-yellow"
                                     onChange={changeHandler}
                                 />
@@ -72,6 +73,7 @@ export const Auth: FC = () => {
                                     type="password" 
                                     name="password" 
                                     className="input-yellow"
+                                    value={form.password}
                                     onChange={changeHandler}
                                 />
                                 <label htmlFor="password">Пароль</label>

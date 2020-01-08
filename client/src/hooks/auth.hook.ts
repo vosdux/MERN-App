@@ -6,11 +6,13 @@ export interface IUserInfo {
     login: (jwtToken: string|null, id: string|null) => void,
     logout: () => void, 
     token: string|null,
-    userId: string|null
+    userId: string|null,
+    ready: boolean
 }
 
 export const useAuth = ():IUserInfo => {
     const [token, setToken] = useState<string|null>(null);
+    const [ready, setReady] = useState<boolean>(false);
     const [userId, setUserId] = useState<string|null>(null);
 
     const login = useCallback((jwtToken: string|null, id: string|null) => {
@@ -38,7 +40,8 @@ export const useAuth = ():IUserInfo => {
                 login(parseData.token, parseData.userId)
             }
         }
+        setReady(true);
     }, [login])
 
-    return { login, logout, token, userId }
+    return { login, logout, token, userId, ready }
 }

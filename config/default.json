@@ -2,5 +2,5 @@
     "port": 5000,
     "mongoUri": "mongodb+srv://vosdux:123qwe@cluster0-7oy0x.azure.mongodb.net/test?retryWrites=true&w=majority",
     "jwtSecret": "vosdux",
-    "baseUrl": "http//localhost: 5000"
+    "baseUrl": "http://localhost:5000"
 }
